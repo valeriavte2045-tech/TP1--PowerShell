@@ -4,6 +4,6 @@ $PSVersionTable
 Write-Host "`n=== CONFIGURACIÓN DE PERMISIVIDAD ==="
 Get-ExecutionPolicy -List
 Write-Host "`n=== EDICIÓN DEL SISTEMA OPERATIVO ==="
-Get-CimInstance Win32_OperatingSystem | Select-Object Caption, Version, BuildNumber, OSArchitecture
+Get-WmiObject Win32_OperatingSystem | Select-Object Caption, Version, BuildNumber, OSArchitecture
 Write-Host "`n=== INFORMACIÓN COMPLETA DEL SISTEMA ==="
 systeminfo
