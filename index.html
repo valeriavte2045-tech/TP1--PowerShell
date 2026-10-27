@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TP1 - PowerShell</title>
+</head>
+<body>
+    <h1>Trabajo Práctico N°1 - PowerShell</h1>
+    <p><strong>Alumno:</strong> Evelyn Vilte</p>
+    
+    <h2>Descripción</h2>
+    <p>Script de PowerShell que muestra información del sistema operativo, versión de PowerShell, política de ejecución y datos completos del sistema.</p>
+    
+    <h2>Contenido del script (InfoSistema.ps1)</h2>
+    <pre>
+# TRABAJO PRÁCTICO N°1 - Información del Sistema
+
+Write-Host "=== VERSIÓN DE POWER SHELL ==="
+$PSVersionTable
+
+Write-Host "`n=== CONFIGURACIÓN DE PERMISIVIDAD ==="
+Get-ExecutionPolicy -List
+
+Write-Host "`n=== EDICIÓN DEL SISTEMA OPERATIVO ==="
+Get-CimInstance Win32_OperatingSystem | Select-Object Caption, Version, BuildNumber, OSArchitecture
+
+Write-Host "`n=== INFORMACIÓN COMPLETA DEL SISTEMA ==="
+systeminfo
+    </pre>
+</body>
+</html>
